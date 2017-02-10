@@ -1,5 +1,5 @@
 //
-//  InputCollector.h
+//  Contact.h
 //  ContactList
 //
 //  Created by Hyung Jip Moon on 2017-02-10.
@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface InputCollector : NSObject
+@interface Contact : NSObject
 
--(NSString *)inputForPrompt:(NSString *)promptString;
+@property NSString* name;
+@property NSString* email;
 
 @end
-
-
