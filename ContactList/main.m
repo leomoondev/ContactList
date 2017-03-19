@@ -12,24 +12,23 @@
 #import "ContactList.h"
 
 int main(int argc, const char * argv[]) {
+    
     @autoreleasepool {
 
         InputCollector* inputCollector = [[InputCollector alloc] init];
-        
-        
         ContactList *contactList = [[ContactList alloc] init];
         
         while (1) {
+            
             printf("--------WELCOME---------\n");
             printf("new - Create a new contact \n");
             printf("list - List all contacts \n");
             printf("quit - Exit Application \n");
             
-            //printf("show - Show all details for a contact \n");
-            
             NSString *usernameInput = [inputCollector inputForPrompt:@"What would you like do next?\n"];
 
             if([usernameInput isEqualToString:@"quit"]) {
+                
                 NSLog(@"User quits");
                 break;
             }
@@ -42,12 +41,11 @@ int main(int argc, const char * argv[]) {
                 [aContact setEmail:[inputCollector inputForPrompt:@"\nEnter your email: "]];
                 [contactList addContact:aContact];
             }
+            
             else if([usernameInput isEqualToString:@"list"]) {
                 
                 [contactList printContactLists];
-    
             }
-
         }
     }
     return 0;

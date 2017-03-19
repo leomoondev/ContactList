@@ -10,7 +10,7 @@
 
 @implementation InputCollector
 
--(NSString *)inputForPrompt:(NSString *)promptString {
+- (NSString *)inputForPrompt:(NSString *)promptString {
     
     NSLog(@"%@", promptString);
     char inputChars[255];

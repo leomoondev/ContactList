@@ -11,12 +11,11 @@
 
 @interface ContactList : NSObject
 
-@property NSMutableArray* storeContacts;
+@property (nonatomic, strong) NSMutableArray* storeContacts;
 
 - (instancetype)init;
 - (void)addContact:(Contact *)newContact;
 - (void)printContactLists;
-
 
 @end
 
